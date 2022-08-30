@@ -1,0 +1,18 @@
+<a class="btn btn-success" [routerLink]="['about']">about</a>&nbsp;
+<a class="btn btn-success" [routerLink]="['student']">student</a>&nbsp;
+<a class="btn btn-info" [routerLink]="['cart']">cart</a>&nbsp;
+
+<router-outlet></router-outlet>
+
+<div *ngFor="let student of myStudents">
+    <button (click)="delStudent( student.id )">Delete:</button>
+    <button (click)="getStudent( student.id )">get one</button>
+    {{student.name }}
+    {{student.age }}
+
+</div>
+<button (click)="addStudent()">Add new student</button>
+
+<input   [(ngModel)]="username">
+<input  [(ngModel)]="userage">
+<h1> {{username}}</h1>
